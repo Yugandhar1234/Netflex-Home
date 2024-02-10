@@ -12,6 +12,8 @@ import { MovieListComponent } from './movie-list/movie-list.component';
 import { register } from 'swiper/element/bundle';
 import { ImgPipe } from './pipes/img.pipe';
 import { TransformPipe } from './pipes/transform.pipe';
+import { CalenderComponent } from './calender/calender.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 register();
 @NgModule({
   declarations: [
@@ -22,12 +24,15 @@ register();
     BannerComponent,
     MovieListComponent,
     ImgPipe,
-    TransformPipe
+    TransformPipe,
+    CalenderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row flex items-center justify-center h-screen">
+        <form [formGroup]="userInfo">
+           <div class="flex justify-center"> 
+            <div >
+                <input type="email"  formControlName="email" #email placeholder="Email"/>
+            </div>
+            <div >
+                <input type="datetime-local"  formControlName="dob" #date>
+            </div>
+           </div>
+            <div class="my-2">
+                <button type="button" class="rounded border-red-200" (click)="scheduleMeeting()">Event</button>
+            </div>
+        </form>
+       
+    </div>
+</div>
