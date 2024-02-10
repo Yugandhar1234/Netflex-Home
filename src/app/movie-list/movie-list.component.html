@@ -1,0 +1,22 @@
+
+<div class="contain">
+  <div class="row">
+    <h1 class="font-bold text-2xl ml-2">{{title}}</h1>
+    <div class="card-row">
+      <div class="tile" *ngFor="let movie of movieList">
+        <div class="tile-media">
+          <img class="tile-img" src="{{movie.poster_path | img}}" alt=""  />
+        </div>
+        <div class="tile-details">
+          <div class="tile-title">
+            <div class="text-wrap  text-white">
+              <p class="text-xl font-bold">{{movie.original_title}}</p>
+              <p class="text-xs my-2">{{movie.overview | transform:150}}</p>
+              <p class="text-green-500">Vote Average : {{movie.vote_average}} %</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+

@@ -1,0 +1,37 @@
+<app-header></app-header>
+<app-banner [bannerInfo]="previewInfo$ | async" [key]="(previewVideo$ | async)?.results[2].key"></app-banner>
+<app-movie-list [movieList]="movies" [title]="'Movies'"></app-movie-list>
+<app-movie-list [movieList]="topRatedMovies" [title]="'Top Rated Movies'"></app-movie-list>
+<app-movie-list [movieList]="nowPlayingMovies" [title]="'New Playing movies'"></app-movie-list>
+<app-movie-list [movieList]="tvShows" [title]="'tvShows'"></app-movie-list>
+<app-movie-list [movieList]="popularMovies" [title]="'Popular Movies'"></app-movie-list>
+
+<!-- <div class="flex items-center h-screen w-full justify-center">
+    <div class="max-w-xs">
+        <div class="bg-white shadow-xl rounded-lg py-3">
+            <div class="photo-wrapper p-2">
+                <img class="w-32 h-32 rounded-full mx-auto" [src]="user.picture" alt="{{user.name}}">
+            </div>
+            <div class="p-2">
+                <h3 class="text-center text-xl text-gray-900 font-medium leading-8">{{user.name}}</h3>
+                <div class="text-center text-gray-400 text-xs font-semibold">
+                    <p>Web Developer</p>
+                </div>
+                <table class="text-xs my-3">
+                    <tbody>
+                        <tr>
+                            <td class="px-2 py-2 text-gray-500 font-semibold">Email</td>
+                            <td class="px-2 py-2">{{user.email}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="text-center my-3">
+                    <a class="text-xs text-indigo-500 italic hover:underline hover:text-indigo-600 font-medium"
+                        (click)="logout()">sign out</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div> -->
