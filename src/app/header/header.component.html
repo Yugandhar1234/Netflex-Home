@@ -6,11 +6,15 @@
     </ul>
   </div>
   <div class="flex items-center gap-3 text-yellow-50">
-   <div class="flex items-center">
-      <a href=""><span>Welcome </span><strong >{{user.name}}</strong></a>
-      <img [src]="user.picture" alt="" class="rounded-full" width="30" height="25">
+  <ng-container *ngIf="user">
+    <div class="flex items-center" *ngIf="user">
+      <a href=""><span>Welcome </span><strong >{{user?.name}}</strong></a>
+      <img [src]="user.picture" alt="" class="rounded-full" width="30" height="25"
+      onerror="this.src='../../assets/pngwing.com.png'">
    </div>
-   <span>|</span>
-    <div class="cursor-pointer" (click)="signout()">Sign out</div>
+   <span >|</span>
+    <div class="cursor-pointer mr-2" (click)="signout()">Signout</div>
+  </ng-container>
+  <div *ngIf="!user" class="cursor-pointer mr-2" (click)="signout()">Signin</div>
   </div>
 </header>
